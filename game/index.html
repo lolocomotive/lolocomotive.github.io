@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave</title>
+
+    <style>
+      #game {
+        border: solid black 1pt;
+        height: 150px;
+        width: 200px;
+        float: left;
+      }
+      #game-post {
+        border: solid blue 1pt;
+        height: 150px;
+        width: 200px;
+        float: left;
+      }
+      #ui {
+        border: solid green 1pt;
+        height: 150px;
+        width: 200px;
+        float: left;
+      }
+      #result {
+        border: solid red 1pt;
+      }
+      .debugInfo {
+        display: none;
+      }
+      body {
+        background-color: burlywood;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="music" src="waveFinal.mp3"></audio>
+    <canvas class="debugInfo" height="600" width="800" id="game"> </canvas>
+    <canvas class="debugInfo" height="600" width="800" id="game-post"> </canvas>
+    <canvas class="debugInfo" height="600" width="800" id="ui"> </canvas>
+    <canvas height="600" width="800" id="result"></canvas>
+    <script>
+      function intersectRect(r1, r2) {
+        return !(
+          r2.left > r1.right ||
+          r2.right < r1.left ||
+          r2.top > r1.bottom ||
+          r2.bottom < r1.top
+        );
+      }
+    </script>
+
+    <script src="movable.js?2"></script>
+    <script src="input.js?2"></script>
+    <script src="enemies.js?2"></script>
+    <script src="player.js?2"></script>
+    <script src="ui.js?2"></script>
+    <script src="postprocessing.js?1"></script>
+    <script src="index.js?"></script>
+    <script>
+      document.getElementById("result").addEventListener("click", function(){click();}, false);
+    </script>
+  </body>
+</html>

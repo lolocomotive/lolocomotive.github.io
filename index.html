@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <title>lolocomotive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="Main.js"></script>
+  </head>
+
+  <body>
+    <div id="topBar">
+      <img src="logo.png" alt="logo" id="leftUpLogo" />
+      <div id="title">lolocomotive</div>
+
+      <div id="nav" class="prog">
+        <div class="navItm" onclick="gotoEl('main');">Général</div>
+        <div class="navItm" onclick="gotoEl('vid');">Vidéo et 3D</div>
+        <div class="navItm" onclick="gotoEl('prog');">Programmation</div>
+        <div class="navItm" onclick="gotoEl('mc');">Minecraft</div>
+      </div>
+
+      <div class="tab-bg main pos2" id="main">
+        <div class="tab main">
+          <h1>Général</h1>
+          <p>Salut,</p>
+          <p>
+            Moi c'est lolocomotive, aka LoicEzt. Je fais des trucs pas
+            ordinaires, souvent inutiles et des fois ca donne quelque chose de
+            stylé. Sur ce site, je t'invite à découvrir une variété de mes
+            projets
+          </p>
+          <p>
+            Si tu veux rester au courant de tout ce que je fais, rejoins
+            <a href="https://discord.gg/SuA4Xqu" target="_blank"
+              >mon serveur discord</a
+            >, suis moi sur
+            <a href="https://www.instagram.com/loic.ezt" target="_blank"
+              >instagram</a
+            >
+            et si tu n'as vraiment rien d'autre à faire, passe voir ma chaine
+            <a
+              href="https://www.youtube.com/channel/UCZXXe5oj0eSmho4xnhpZMyg"
+              target="_blank"
+              >Youtube</a
+            >
+            et
+            <a
+              href="https://www.twitch.tv/lolocomotive_original"
+              target="_blank"
+              >Twitch</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="tab-bg vid pos2" id="vid">
+        <div class="tab vid">
+          <h1>Vidéo et 3D</h1>
+          <p>
+            Des fois, je m'amuse avec Blender pour faire des trucs, genre
+            simulations de fluides, rendus de tests, j'ai aussi fait une ile
+            avec un volcan dessus.
+          </p>
+          <p>
+            Je fais aussi du montage, mais pas encore à un niveau de ouf. Tu
+            peux aller voir ma chaine
+            <a
+              href="https://www.youtube.com/channel/UCZXXe5oj0eSmho4xnhpZMyg"
+              target="_blank"
+              >Youtube</a
+            >
+            si tu veux
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-bg prog pos1" id="prog">
+        <div class="tab prog">
+          <h1>Programmation</h1>
+          <p>Alors...........</p>
+          <p>
+            pas grand chose pour l'instant, appart ce site, fait 100% à la main,
+            sans librairies externes ni rien
+          </p>
+          <p>
+            Et je fais aussi un plugin pour mon serveur minecraft, tu peux aller
+            voir sur
+            <a href="https://github.com/lolocomotive" target="_blank"
+              >mon github.</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-bg mc pos2" id="mc">
+        <div class="tab mc">
+          <h1>Minecraft</h1>
+          <p>haha yes.</p>
+          <p>
+            J'ai un serveur minecraft, si tu veux rejoindre il y a plus d'infos
+            sur mon
+            <a href="https://discord.gg/SuA4Xqu" target="_blank">discord</a>!
+          </p>
+          <p>
+            Je développe aussi un plugin pour mon serveur aka loloPluginV2, avec
+            l'aide de Iceknith.
+          </p>
+        </div>
+      </div>
+      <div id="bg-thing-1" class="prog"></div>
+      <span id="bienvenue">Bienvenue</span>
+
+      <script>
+        gotoEl("main");
+      </script>
+    </div>
+  </body>
+</html>
