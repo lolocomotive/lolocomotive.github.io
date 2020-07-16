@@ -277,7 +277,6 @@ function death() {
   ctxFinal.drawImage(canvasGameRaw, 0, 0);
   ctxFinal.drawImage(canvasPost, 0, 0);
   ctxFinal.drawImage(canvasUI, 0, 0);
-  console.log("you died!");
 }
 
 function start(level) {

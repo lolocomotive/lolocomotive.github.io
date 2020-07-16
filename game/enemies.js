@@ -30,6 +30,13 @@ class BasicEnemy extends Movable {
       this.position.y = this.gameHeight - this.height;
       this.velY = -this.velY;
     }
+    var i;
+    for (i = 0; i < this.trails.length; i++) {
+      this.trails[i].update(deltaTime);
+      if (this.trails[i].color.a <= 0) {
+        this.trails.shift();
+      }
+    }
   }
 }
 
@@ -48,7 +55,6 @@ class FastEnemy extends Movable {
   update(deltaTime) {
     this.position.x += this.velX * (deltaTime / 200);
     this.position.y += this.velY * (deltaTime / 200);
-
     if (this.position.x < 0) {
       this.position.x = 0;
       this.velX = -this.velX;
@@ -64,6 +70,13 @@ class FastEnemy extends Movable {
     if (this.position.y + this.height > this.gameHeight) {
       this.position.y = this.gameHeight - this.height;
       this.velY = -this.velY;
+    }
+    var i;
+    for (i = 0; i < this.trails.length; i++) {
+      this.trails[i].update(deltaTime);
+      if (this.trails[i].color.a <= 0) {
+        this.trails.shift();
+      }
     }
   }
 }

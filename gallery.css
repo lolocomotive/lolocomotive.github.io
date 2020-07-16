@@ -1,0 +1,25 @@
+#gallery-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.gallery-itm > * {
+  width: 100%;
+}
+.gallery-itm {
+  margin: 1em;
+  border: solid grey 2pt;
+  background-color: #eee;
+  color: #111;
+  transition: all 0.1s;
+}
+
+.gallery-title {
+  margin: 5pt;
+  display: block;
+  font-size: 2em;
+}
+
+.gallery-itm:hover {
+  transform: scale(1.01);
+}

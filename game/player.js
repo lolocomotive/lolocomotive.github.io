@@ -4,7 +4,7 @@ class Player extends Movable {
     this.width = 30;
     this.height = 30;
     this.speed = 100;
-    this.health = 100;
+    this.health = 1000000;
   }
 
   update(deltaTime) {
@@ -31,8 +31,14 @@ class Player extends Movable {
       }
     }
     if (this.health <= 0) {
-      console.log("you died");
       currentState = GAME_STATE.died;
+    }
+    var i;
+    for (i = 0; i < this.trails.length; i++) {
+      this.trails[i].update(deltaTime);
+      if (this.trails[i].color.a <= 0) {
+        this.trails.shift();
+      }
     }
   }
 }

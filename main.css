@@ -1,0 +1,119 @@
+/* 
+    Created on : 02.05.2020, 12:13:23
+    Author     : loicEzt
+*/
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: "Lato", calibri, sans-serif;
+  text-align: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+#title {
+  position: relative;
+  font-size: 20px;
+  height: 23px;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+  background-color: #222;
+  border: solid #666 2px;
+  animation-name: incoming-title;
+  animation-duration: 3s;
+  user-select: none;
+}
+#topBar {
+  text-align: center;
+  justify-content: center;
+}
+#leftUpLogo {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  animation-name: appear;
+  animation-duration: 3.5s;
+}
+.navItm {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  height: 55px;
+  transition: all 0.3s;
+  cursor: pointer;
+  user-select: none;
+  z-index: 20;
+}
+
+#nav {
+  margin-top: 0;
+
+  animation-name: appear;
+  animation-duration: 3.5s;
+  transition: all 0.5s;
+  z-index: 10;
+}
+img {
+  transition: all 0.1s;
+}
+#bienvenue {
+  font-family: "Lato";
+  font-weight: 100;
+  font-size: 20vw;
+  animation-name: incoming-greeting;
+  animation-duration: 3s;
+  position: relative;
+  display: block;
+  margin: auto;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+#bg-thing-1 {
+  transform: skewX(-20deg) rotate(-20deg);
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 10vh;
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.gone {
+  opacity: 0;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  color: #aaa;
+}
+a:hover {
+  background-color: #111;
+  color: #eee;
+}

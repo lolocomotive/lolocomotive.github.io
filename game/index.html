@@ -52,7 +52,7 @@
         );
       }
     </script>
-
+    <script src="trail.js"></script>
     <script src="movable.js?2"></script>
     <script src="input.js?2"></script>
     <script src="enemies.js?2"></script>
@@ -61,7 +61,13 @@
     <script src="postprocessing.js?1"></script>
     <script src="index.js?"></script>
     <script>
-      document.getElementById("result").addEventListener("click", function(){click();}, false);
+      document.getElementById("result").addEventListener(
+        "click",
+        function () {
+          click();
+        },
+        false
+      );
     </script>
   </body>
 </html>

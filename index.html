@@ -10,7 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="gallery.css" rel="stylesheet" type="text/css" />
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+    <link href="small-screen.css" rel="stylesheet" type="text/css" />
+    <link href="wide-screen.css" rel="stylesheet" type="text/css" />
     <script src="Main.js"></script>
   </head>
 
@@ -27,6 +31,7 @@
       </div>
 
       <div class="tab-bg main pos2" id="main">
+        <div class="tab-bg-img main"></div>
         <div class="tab main">
           <h1>Général</h1>
           <p>Salut,</p>
@@ -60,6 +65,7 @@
         </div>
       </div>
       <div class="tab-bg vid pos2" id="vid">
+        <div class="tab-bg-img vid"></div>
         <div class="tab vid">
           <h1>Vidéo et 3D</h1>
           <p>
@@ -77,10 +83,33 @@
             >
             si tu veux
           </p>
+          <p>Ah, et juste ici en-dessous, là tu vois y'a une gallerie haha.</p>
+          <div id="gallery-container">
+            <div class="gallery-itm">
+              <img src="gallery/sunset/0.png" />
+              <span class="gallery-title">Sunset</span>
+            </div>
+            <div class="gallery-itm">
+              <img src="gallery/falling_cubes/0.png" /><span class="gallery-title">Falling cubes</span>
+            </div>
+            <div class="gallery-itm">
+              <img src="gallery/stacked_cubes/0.png" /><span class="gallery-title">Stacked cubes</span>
+            </div>
+            <div class="gallery-itm">
+              <img src="gallery/island/0.png" /><span class="gallery-title">Island</span>
+            </div>
+            <div class="gallery-itm">
+              <img src="gallery/suzanne/0.png" /><span class="gallery-title">Suzanne</span>
+            </div>
+            <div class="gallery-itm">
+              <img src="gallery/yeet/0.png" /><span class="gallery-title">Yeet</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="tab-bg prog pos1" id="prog">
+        <div class="tab-bg-img prog"></div>
         <div class="tab prog">
           <h1>Programmation</h1>
           <p>Alors...........</p>
@@ -99,6 +128,7 @@
       </div>
 
       <div class="tab-bg mc pos2" id="mc">
+        <div class="tab-bg-img mc"></div>
         <div class="tab mc">
           <h1>Minecraft</h1>
           <p>haha yes.</p>
