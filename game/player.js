@@ -4,7 +4,7 @@ class Player extends Movable {
     this.width = 30;
     this.height = 30;
     this.speed = 100;
-    this.health = 1000000;
+    this.health = 100;
   }
 
   update(deltaTime) {
