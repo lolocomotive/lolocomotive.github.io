@@ -5,6 +5,7 @@ class Player extends Movable {
     this.height = 30;
     this.speed = 100;
     this.health = 100;
+    this.position = {x:GAME_WIDTH/2 - this.width,y:GAME_HEIGHT/2 - this.height}
   }
 
   update(deltaTime) {
