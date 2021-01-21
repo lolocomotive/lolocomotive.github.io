@@ -73,8 +73,8 @@ function gameLoop(timestamp) {
   let deltaTime = timestamp - lastTime;
   lastTime = timestamp;
 
-  ctx.fillStyle = "black";
-  ctx.fillStyle = "";
+  ctx.fillStyle = "rgba(0,0,0,.1)";
+  //ctx.fillStyle = "";
   ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   ctx.shadowBlur = 10;
 
@@ -268,7 +268,6 @@ function death() {
   document.getElementById("music").volume = 0.1;
   gameObjects = [];
   ctx.fillStyle = "black";
-  ctx.fillStyle = "";
   ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   ctxUI.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   uiObjects.forEach((element) => element.render(ctxUI));
@@ -281,7 +280,7 @@ function death() {
 
 function start(level) {
   currentLevel = level;
-  ctx.fillStyle = "rgba(0,0,0,1)";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
   currentState = GAME_STATE.running;
   document.getElementById("music").play();

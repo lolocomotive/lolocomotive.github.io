@@ -19,7 +19,7 @@ class Movable {
   render(ctx) {
     var i;
     for (i = 0; i < this.trails.length; i++) {
-      this.trails[i].render(ctx);
+      //this.trails[i].render(ctx);
     }
     ctx.shadowBlur = 10;
     ctx.shadowColor = "rgba("
