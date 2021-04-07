@@ -40,7 +40,7 @@
                     l'audiovisuel et la programmation. Je consacre un partie de
                     mon temps à programmer (cf. mon github), par exemple en ce
                     moment j'ai un projet avec Vue.js (donc le combo
-                    HTML+JS+CSS), mais j'ai aussi programmé beacoup en java et
+                    HTML+JS+CSS), mais j'ai aussi programmé beaucoup en java et
                     un peu d'autres langages (C, C#, PHP, Python, SQL). J'ai
                     donc plus d'un an d'expérience avec IntelliJ IDEA et Visual
                     studio code.
@@ -65,11 +65,7 @@
                     :key="el.id"
                 >
                     <video v-if="el.type === 'video'" :src="el.img"></video>
-                    <img
-                        v-else
-                        :src="el.img +'?'+ Math.random()"
-                        :alt="el.subtitle"
-                    />
+                    <img v-else :src="el.img" :alt="el.subtitle" />
                     <div class="img-desc">
                         {{el.subtitle}} {{(el.type === 'video') ? '(vidéo)' :
                         ''}}
@@ -83,11 +79,11 @@
         <p>Plus de lecture - yay</p>
         <p>
             Donc voilà, ce site c'est moi qui l'ai écrit à la main avec Vue.js
-            et visual studio code. Y'a plus rien d'intéressabt ici mais si tu
+            et visual studio code. Y'a plus rien d'intéressant ici mais si tu
             veux y'a toujours mes liens sociaux en haut de la page <em>lol</em>
         </p>
         <p>
-            Enfin les plus importants sont Instagram et GitHub. Ma chaine
+            Enfin les plus importants sont Instagram et GitHub. Ma chaîne
             YouTube et mon serveur Discord sont morts donc voilà.
         </p>
         <footer>

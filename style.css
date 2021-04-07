@@ -100,6 +100,7 @@ footer {
 }
 .gallery-itm:hover {
     box-shadow: 0 0 30px 15px #00000010;
+    transform: scale(1.05);
 }
 
 .gallery-subtitle {
