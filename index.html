@@ -11,7 +11,7 @@
         />
         <title>LoicEzt</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
+        <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
     </head>
     <body>
         <header>
@@ -58,22 +58,27 @@
                 </p>
             </div>
             <div id="gallery">
-                <div class="gallery-itm" v-for="el in items" :key="el.id">
+                <div
+                    @click="showImage(el)"
+                    class="gallery-itm"
+                    v-for="el in items"
+                    :key="el.id"
+                >
+                    <video v-if="el.type === 'video'" :src="el.img"></video>
                     <img
-                        @click="showImage(el)"
+                        v-else
                         :src="el.img +'?'+ Math.random()"
-                        alt="el.subtitle"
+                        :alt="el.subtitle"
                     />
-                    <div class="img-desc">{{el.subtitle}}</div>
+                    <div class="img-desc">
+                        {{el.subtitle}} {{(el.type === 'video') ? '(vidéo)' :
+                        ''}}
+                    </div>
                 </div>
             </div>
         </div>
         <div onclick="closeImg(event)" id="bg" class="hidden">
-            <div id="big-img">
-                <img />
-                <div id="big-img-sub"></div>
-                <div id="big-img-desc"></div>
-            </div>
+            <div id="big-img"></div>
         </div>
         <p>Plus de lecture - yay</p>
         <p>
