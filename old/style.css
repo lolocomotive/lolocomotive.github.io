@@ -1,0 +1,348 @@
+/* 
+    Created on : 02.05.2020, 12:13:23
+    Author     : loicEzt
+*/
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* Smol screen bois */
+  #nav {
+    display: block;
+    height: 300px;
+  }
+  #leftUpLogo {
+    display: none;
+  }
+  .navItm:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 55px;
+    border-bottom: none;
+  }
+  .tab-bg {
+    top: 350px;
+  }
+  #topBar {
+    height: 337px;
+  }
+  p {
+    font-size: 2rem;
+    margin: 0 1em 1em 1em;
+    display: block;
+  }
+
+  @keyframes incoming-title {
+    0% {
+      top: 30vh;
+      height: 10vw;
+      font-size: 10vw;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    60% {
+      top: 35vh;
+      font-size: 10vw;
+      height: 10vw;
+    }
+    80% {
+      top: 0%;
+      transform: scale(1);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+    }
+    100% {
+    }
+  }
+  @keyframes incoming-greeting {
+    0% {
+      top: 20vh;
+      opacity: 0;
+      display: block;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    60% {
+      top: 21vh;
+      opacity: 0.7;
+    }
+    80% {
+      top: 30vh;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      opacity: 0;
+      display: block;
+    }
+    100% {
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* Big screen bois */
+  #nav {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    display: grid;
+    height: 75px;
+  }
+  #topBar {
+    height: 110px;
+  }
+  #leftUpLogo {
+    display: block;
+  }
+  .navItm:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: solid white 5pt;
+  }
+  .tab-bg {
+    top: 135px;
+  }
+  p {
+    font-size: 3rem;
+    margin: 0 2em 1em 2em;
+    display: block;
+  }
+  @keyframes incoming-title {
+    0% {
+      top: 20vh;
+      height: 10vw;
+      font-size: 10vw;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    60% {
+      top: 25vh;
+      font-size: 10vw;
+      height: 10vw;
+    }
+    80% {
+      top: 0%;
+      transform: scale(1);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+    }
+    100% {
+    }
+  }
+  @keyframes incoming-greeting {
+    0% {
+      top: 20vh;
+      opacity: 0;
+      display: block;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    60% {
+      top: 21vh;
+      opacity: 0.7;
+    }
+    80% {
+      top: 30vh;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      opacity: 0;
+      display: block;
+    }
+    100% {
+    }
+  }
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: "Lato", calibri, sans-serif;
+  text-align: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+#title {
+  position: relative;
+  font-size: 20px;
+  height: 23px;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+  background-color: #222;
+  border: solid #666 2px;
+  animation-name: incoming-title;
+  animation-duration: 3s;
+  user-select: none;
+}
+#topBar {
+  text-align: center;
+  justify-content: center;
+}
+#leftUpLogo {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  animation-name: appear;
+  animation-duration: 3.5s;
+}
+.navItm {
+  padding-top: 20px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  height: 55px;
+  transition: all 0.3s;
+  cursor: pointer;
+  user-select: none;
+  z-index: 20;
+}
+
+#nav {
+  margin-top: 0;
+
+  animation-name: appear;
+  animation-duration: 3.5s;
+  transition: all 0.5s;
+  z-index: 10;
+}
+img {
+  transition: all 0.1s;
+}
+img:hover {
+  transform: scale(1.1);
+}
+#bienvenue {
+  font-family: "Lato";
+  font-weight: 100;
+  font-size: 20vw;
+  animation-name: incoming-greeting;
+  animation-duration: 3s;
+  position: relative;
+  display: block;
+  margin: auto;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+#bg-thing-1 {
+  transform: skewX(-20deg) rotate(-20deg);
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 10vh;
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.tab {
+  animation-name: appear;
+  animation-duration: 3.5s;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100vw;
+  transition: all 1s;
+}
+.tab-bg {
+  animation-name: appear;
+  animation-duration: 3.5s;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100vw;
+  transition: all 1s;
+}
+.pos1 {
+  left: 0;
+  opacity: 1;
+}
+.pos2 {
+  left: 100vw;
+  opacity: 0;
+}
+.main {
+  background-color: rgba(34, 34, 100, 0.5);
+}
+.vid {
+  background-color: rgba(255, 100, 0, 0.5);
+}
+.prog {
+  background-color: rgba(0, 100, 0, 0.5);
+}
+.prog.tab {
+  background-image: url(prog-bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.mc.tab {
+  background-image: url(mc-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.vid.tab {
+  background-image: url(3d-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.main.tab {
+  background-image: url(gn-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.mc {
+  background-color: rgba(100, 0, 0, 0.5);
+}
+.mc ::selection {
+  color: rgba(100, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.main ::selection {
+  color: rgba(34, 34, 100, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.vid ::selection {
+  color: rgba(255, 100, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.prog ::selection {
+  color: rgba(0, 100, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.gone {
+  opacity: 0;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  color: #aaa;
+}
+a:hover{
+  background-color:#111;
+  color:#eee;
+}

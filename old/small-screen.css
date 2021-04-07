@@ -1,0 +1,73 @@
+@media screen and (max-width: 1000px) {
+    /* Smol screen bois */
+    #nav {
+      display: block;
+      height: 300px;
+    }
+    #leftUpLogo {
+      display: none;
+    }
+    .navItm:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 55px;
+      border-bottom: none;
+    }
+    .tab-bg {
+      top: 350px;
+    }
+    #topBar {
+      height: 337px;
+    }
+    p {
+      font-size: 2rem;
+      margin: 0 1em 1em 1em;
+      display: block;
+    }
+  
+    @keyframes incoming-title {
+      0% {
+        top: 30vh;
+        height: 10vw;
+        font-size: 10vw;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      60% {
+        top: 35vh;
+        font-size: 10vw;
+        height: 10vw;
+      }
+      80% {
+        top: 0%;
+        transform: scale(1);
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+      }
+      100% {
+      }
+    }
+    @keyframes incoming-greeting {
+      0% {
+        top: 20vh;
+        opacity: 0;
+        display: block;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      60% {
+        top: 21vh;
+        opacity: 0.7;
+      }
+      80% {
+        top: 30vh;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        opacity: 0;
+        display: block;
+      }
+      100% {
+      }
+    }
+  }
+  
