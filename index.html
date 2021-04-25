@@ -57,11 +57,9 @@
                     Blender.
                 </p>
             </div>
-            <noscript>
-                <h1 style="font-weight: bold; color: red">
-                    La galerie ne fonctionne pas sans JavaScript
-                </h1>
-            </noscript>
+            <h1 id="js-warning" style="font-weight: bold; color: red">
+                La galerie ne fonctionne pas sans JavaScript
+            </h1>
             <div style="display: none" id="gallery">
                 <div
                     @click="showImage(el)"
@@ -79,6 +77,7 @@
             </div>
             <script>
                 document.getElementById('gallery').style = '';
+                document.getElementById('js-warning').style = 'display:none';
             </script>
         </div>
         <div onclick="closeImg(event)" id="bg" class="hidden">
