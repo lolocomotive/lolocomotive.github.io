@@ -39,11 +39,11 @@
                     un tas de logiciels divers et variés, surtout dans
                     l'audiovisuel et la programmation. Je consacre un partie de
                     mon temps à programmer (cf. mon github), par exemple en ce
-                    moment j'ai un projet avec Vue.js (donc le combo
-                    HTML+JS+CSS), mais j'ai aussi programmé beaucoup en java et
-                    un peu d'autres langages (C, C#, PHP, Python, SQL). J'ai
-                    donc plus d'un an d'expérience avec IntelliJ IDEA et Visual
-                    studio code.
+                    moment j'ai un projet avec Vue.js (donc le combo HTML + JS +
+                    CSS), mais j'ai aussi programmé beaucoup en java et un peu
+                    d'autres langages (C, C#, PHP, Python, SQL). J'ai donc plus
+                    d'un an d'expérience avec IntelliJ IDEA et Visual studio
+                    code.
                 </p>
                 <p>
                     Pour ce qui est audiovisuel, ca fait plus d'un an que j'ai
@@ -57,7 +57,12 @@
                     Blender.
                 </p>
             </div>
-            <div id="gallery">
+            <noscript>
+                <h1 style="font-weight: bold; color: red">
+                    La galerie ne fonctionne pas sans JavaScript
+                </h1>
+            </noscript>
+            <div style="display: none" id="gallery">
                 <div
                     @click="showImage(el)"
                     class="gallery-itm"
@@ -72,6 +77,9 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.getElementById('gallery').style = '';
+            </script>
         </div>
         <div onclick="closeImg(event)" id="bg" class="hidden">
             <div id="big-img"></div>
